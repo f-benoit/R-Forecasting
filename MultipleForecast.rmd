@@ -1,7 +1,18 @@
 
 
 ## Time Series with Week Seasonal periods
+This chunk of code forecasts the futur 36 weeks sales for each depot present in my data
+* Create an empty dataframe
+* for each depotname (in my  vector depot) run the forecasting process
+* if there's less than 150 weeks historic I don't forecast anything
+* remove 12 weeks of my historic data and keep them in my testing dataframe
+* tun the forecasting function stlf on my trianingset all historic weeks-12
+* store the result of the sales forecatsing for the enxt 36 weeks
+* repeat the operation for each depot
+* merge all my data together forecasted data, original historic sales and original budget data
+* export them into a csv file
 ```{r }
+#defots is a vector of DepotName
 df <- data.frame(WeekDate=as.Date(character()),
                  Depot=character(), 
                  SalesForecast=numeric()) 

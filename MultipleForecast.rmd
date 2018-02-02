@@ -36,7 +36,7 @@ for (i in 1:length(depots)) {
           df<-rbind(df,newRows)
         }
 }
-tempDF<-merge(df.Budget, df.Forecast, by = c("DepotName","WeekYear"), all = TRUE)
-myDF<-merge(tempDF, df.Sales, by = c("DepotName","WeekYear"), all = TRUE)
+tempDF<-merge(df.Budget, df.Forecast, by = c("Depot","WeekYear"), all = TRUE)
+myDF<-merge(tempDF, df.Sales, by = c("Depot","WeekYear"), all = TRUE)
 write.csv(myDF, file = "Budget_VS_Sales_Forecast.csv")
 ```

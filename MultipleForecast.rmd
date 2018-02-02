@@ -12,7 +12,7 @@ This chunk of code forecasts the futur 36 weeks sales for each depot present in 
 * merge all my data together forecasted data, original historic sales and original budget data
 * export them into a csv file
 ```{r }
-#defots is a vector of DepotName
+#depots is a vector that contains the list of my depot names
 df <- data.frame(WeekDate=as.Date(character()),
                  Depot=character(), 
                  SalesForecast=numeric()) 
